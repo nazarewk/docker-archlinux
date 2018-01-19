@@ -1,0 +1,1 @@
+Arch Linux based docker image with yaourt installed
