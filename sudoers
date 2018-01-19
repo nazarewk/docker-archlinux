@@ -1,0 +1,2 @@
+Cmnd_Alias  PACMAN = /usr/bin/pacman, /usr/bin/yaourt
+%wheel ALL=(ALL) NOPASSWD: PACMAN
