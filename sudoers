@@ -1,4 +1,0 @@
-Cmnd_Alias  PACMAN = /usr/bin/pacman, /usr/bin/yaourt
-%wheel ALL=(ALL) NOPASSWD: PACMAN
-Cmnd_Alias  CLEANUP = /usr/bin/paccache -rk 0, /usr/bin/rm -Rf /tmp/yaourt-tmp-arch
-%wheel ALL=(ALL) NOPASSWD: CLEANUP

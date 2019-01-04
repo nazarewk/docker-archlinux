@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -eEuo pipefail
+set -x
+
+sudo paccache -rk0 || true
+sudo rm -f \
+ /var/cache/pacman/pkg/* \
+ /var/lib/pacman/sync/* \
+ /etc/pacman.d/mirrorlist.pacnew || true
+
+sudo rm -rf /tmp/* || true
+
+for directory in $(getent passwd | cut -d: -f6 | sort | uniq); do
+  directory="${directory%/}"
+  if [[ -d "${directory}/.cache/yay" ]]; then
+    sudo rm -rf "${directory}/.cache/yay"
+  fi
+done

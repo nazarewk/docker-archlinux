@@ -1,1 +1,1 @@
-Arch Linux based docker image with yaourt installed
+Arch Linux based docker image with yay pacman wrapper installed
