@@ -1,5 +1,5 @@
-FROM archimg/base-devel
-MAINTAINER Krzysztof Nazarewski <nazarewk+docker@gmail.com>
+FROM archlinux:base-devel
+MAINTAINER Krzysztof Nazarewski <3494992+nazarewk@users.noreply.github.com>
 
 ADD bin/ /usr/local/bin/
 
@@ -15,5 +15,4 @@ RUN set -x && \
   curl https://aur.archlinux.org/cgit/aur.git/snapshot/yay-bin.tar.gz | tar zx && \
   cd yay-bin && \
   makepkg -si --noconfirm && \
-  yay -S --noconfirm yaourt && \
   docker-build-cleanup

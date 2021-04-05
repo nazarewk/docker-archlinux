@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-set -eEuo pipefail
-set -x
+set -xeEuo pipefail
+shopt -s dotglob
 
-sudo paccache -rk0 || true
+sudo pacman -Scc
 sudo rm -f \
  /var/cache/pacman/pkg/* \
  /var/lib/pacman/sync/* \
