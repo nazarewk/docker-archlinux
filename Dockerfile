@@ -10,7 +10,7 @@ USER arch
 WORKDIR /home/arch
 
 RUN set -x && \
-  sudo pacman -Sy git sudo pacman pacman-contrib --noconfirm && \
+  sudo pacman -Syy --noconfirm git sudo pacman pacman-contrib && \
   cd /tmp/ && \
   curl https://aur.archlinux.org/cgit/aur.git/snapshot/yay-bin.tar.gz | tar zx && \
   cd yay-bin && \
